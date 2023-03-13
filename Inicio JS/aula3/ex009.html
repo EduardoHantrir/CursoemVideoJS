@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+    <style>
+    body{
+        background-color: bisque;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+    }
+    </style>
+</head>
+<body>
+    <h2>Digite a sua velocidade:</h2>
+    <input type="text" id="Velocidade"/>
+    <input type="button" id="Imp" value="import" onclick="clicar()"/>   
+    <div id="dois">a</div>
+    <div id="result">a</div>
+    <script>
+        var quant = document.querySelector("input#velocidade");
+        var res = document.querySelector("div#result");
+        var doc = window.document.getElementById("dois");
+        var valor = parseInt(quant);
+        vel.addEventListen('click', clicar)
+        res.addEventListen('click', clicar)
+        doc.addEventListen('click', clicar)
+        function clicar() {
+        doc.innerHTML = `Sua velocidade é de ${valor}Km/h.`
+            if (valor <= 60){
+            res.innerHTML = "Você esta dentro do limite de velocidade"
+            } else {
+            res.innerHTML = "Você foi multado"
+            }
+        }
+    </script>
+</body>
+</html>

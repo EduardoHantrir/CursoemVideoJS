@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com interatividade</title>
+</head>
+<body>
+    <h1>Vamos somar alguns numeros?</h1>
+    <input type="text" id="n" name="n1">
+    +
+    <input type="text" id="n" name="n2">
+    <input type="button" id="res" value="somar" onclick="clicar()">
+    <div id="res">Resultado...</div>
+
+    <script>
+        var tn1 = document.querySelector("input#n1");
+        tn1.addEventListener("click", clicar);
+        var tn2 = document.querySelector("input#n2");
+        tn2.addEventListener("click", clicar);
+        var res = window.document.getElementById('res');
+        res.addEventListener("click", clicar);
+        function clicar()
+        {
+        var n1 = parseInt(tn1);
+        var n2 = parseInt(tn2);
+        var soma = n1 + n2;
+        res.innerHTML = `A soma de ${n1} e ${n2} é igual a ${soma}`;
+        }
+    </script>
+</body>
+</html>
